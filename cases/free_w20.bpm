@@ -1,0 +1,14 @@
+# A Gaussian beam spreads as w0 sqrt(1 + (z / z_R)^2); the paraxial equation reproduces this exactly.
+# Reference: the closed form, within 0.4% (grid and window).
+title Gaussian beam of 2 um waist diffracting in the cladding
+grid dx=0.05 dz=0.25
+window width=308 length=150
+launch gaussian x=0 radius=2
+plane end z=150
+expect total end 1.000000000 2e-7
+expect centroid end -0.0000000 2e-6
+expect radius end 25.6929320 2e-6
+expect neff 1.442835642 2e-8
+expect radius end 25.70364 0.1028
+expect conserved 1e-6
+expect centroid end 0 1e-6
