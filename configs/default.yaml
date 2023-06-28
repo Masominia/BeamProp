@@ -1,0 +1,23 @@
+# Where the layout library lives and how the report groups it.
+cases_dir: cases
+fast_every: 9            # in fast mode only every n-th layout is simulated
+fast_families: [step_dz, taper_, coupler_gap, mmi_1x2_w6]   # always simulated: the studies need them
+
+families:
+  free propagation: [free_]
+  straight guides: [straight_]
+  launch conditions: [launch_]
+  directional couplers: [coupler_]
+  multimode interferometers: [mmi_]
+  tapers: [taper_]
+  s-bends: [sbend_]
+  y-branches: [ybranch_]
+  absorbing edges: [absorber_]
+  step and grid: [step_, grid_]
+
+# Guided modes in their own straight guide, also compared with the modal solution (no stepping).
+modal_check: [straight_w0400_m0, straight_w0500_m0, straight_w0800_m0, straight_w1200_m1, straight_w2000_m2]
+modal_bound: 2.0e-3
+
+# Layouts shown in the overview figure.
+gallery: [coupler_gap200, mmi_1x2_w6_l100, mmi_2x2_l100, taper_up_l20, ybranch_l40, absorber_s030]
