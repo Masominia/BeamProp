@@ -1,0 +1,13 @@
+# In the paraxial equation a tilted beam advances sideways by z sin(angle), not z tan(angle): 3.49 against 3.49 um here.
+# Reference: z sin(angle), the paraxial result.
+title Gaussian beam tilted by 2 degrees
+grid dx=0.05 dz=0.125
+window width=80 length=100
+launch gaussian x=0 radius=3 tilt=2
+plane end z=100
+expect total end 1.000000000 2e-7
+expect centroid end 3.4893811 2e-6
+expect radius end 11.7754812 2e-6
+expect neff 1.442469491 2e-8
+expect centroid end 3.48995 0.02
+expect radius end 11.77769 0.04
