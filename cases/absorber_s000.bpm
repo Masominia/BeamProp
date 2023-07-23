@@ -1,0 +1,13 @@
+# A beam at 15 degrees leaves the window half way along. What is left at the end was reflected: everything without an absorber, some if the absorber is too weak (the wall behind it) or too strong (its own front).
+# Reference: the same propagation stepped independently in NumPy.
+title Tilted beam meeting the edge, absorber strength 0
+grid dx=0.05 dz=0.25
+window width=40 length=150
+absorber width=5 strength=0
+launch gaussian x=0 radius=5 tilt=15
+plane end z=150
+expect total end 1.000000000 2e-7
+expect centroid end 1.2921579 2e-6
+expect radius end 11.3348111 2e-6
+expect neff 1.417939477 2e-8
+expect conserved 1e-9
