@@ -1,0 +1,12 @@
+# The transverse wavelength of this beam is 4.1 um: an absorber thinner than that reflects, a wider one can be gentler.
+# Reference: the same propagation stepped independently in NumPy.
+title Tilted beam meeting a 2 um absorber
+grid dx=0.05 dz=0.25
+window width=34 length=150
+absorber width=2 strength=0.3
+launch gaussian x=0 radius=5 tilt=15
+plane end z=150
+expect total end 0.014094841 2e-7
+expect centroid end -1.5776130 2e-6
+expect radius end 12.7241369 2e-6
+expect neff 1.417072478 2e-8
