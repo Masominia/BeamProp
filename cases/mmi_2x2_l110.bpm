@@ -1,0 +1,20 @@
+# Inputs at a sixth of the width from the axis excite no mode of order 2, 5, 8: two images appear at L_pi / 2 = 46.35 um.
+# Reference: a 3 dB split near that length.
+title 2x2 multimode interferometer at 1.1 of the 3 dB length
+reference 2.8
+grid dx=0.02 dz=0.25
+window width=16 length=76
+guide straight x=-1 width=1.2 from=0 to=10
+guide straight x=0 width=6 from=10 to=61
+guide straight x=1 width=1.2 from=61 to=76
+guide straight x=-1 width=1.2 from=61 to=76
+launch mode x=-1 width=1.2
+monitor bar z=76 x=-1 width=1.2
+monitor cross z=76 x=1 width=1.2
+plane end z=76
+expect power bar 0.283832912 2e-7
+expect power cross 0.221306911 2e-7
+expect total end 0.997010856 2e-7
+expect centroid end 0.2415539 2e-6
+expect radius end 5.3020129 2e-6
+expect neff 2.824166898 2e-8
