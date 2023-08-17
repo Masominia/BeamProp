@@ -1,0 +1,21 @@
+# A centred input forms two images at 3 L_pi / 8, with L_pi = 162.13 um from the two lowest modes of the body.
+# Reference: equal outputs by symmetry; near the imaging length each carries almost half.
+title 1x2 multimode interferometer 8 um wide at 1.1 of the imaging length
+reference 2.8
+grid dx=0.02 dz=0.25
+window width=18 length=92
+guide straight x=0 width=1.2 from=0 to=10
+guide straight x=0 width=8 from=10 to=77
+guide straight x=2 width=1.2 from=77 to=92
+guide straight x=-2 width=1.2 from=77 to=92
+launch mode x=0 width=1.2
+monitor upper z=92 x=2 width=1.2
+monitor lower z=92 x=-2 width=1.2
+plane end z=92
+expect power upper 0.193124693 2e-7
+expect power lower 0.193124693 2e-7
+expect total end 0.996563761 2e-7
+expect centroid end 0.0000000 2e-6
+expect radius end 6.9970547 2e-6
+expect neff 2.645768098 2e-8
+expect ratio upper lower 1.0 1e-4
