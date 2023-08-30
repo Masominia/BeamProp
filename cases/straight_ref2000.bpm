@@ -1,0 +1,16 @@
+# The paraxial equation is exact only for waves at the reference index. A mode of index n shows n0 + (n^2 - n0^2) / (2 n0) instead.
+# Reference: that formula applied to the mode of the transverse grid, with the phase per step t replaced by 2 atan(t / 2) as the Crank-Nicolson step does.
+title Straight guide with the reference index set to 2
+window width=12 length=100
+reference 2.0
+guide straight x=0 width=0.5 from=0 to=100
+launch mode x=0 width=0.5
+monitor out z=100 x=0 width=0.5
+plane end z=100
+expect power out 0.999998880 2e-7
+expect total end 0.999999499 2e-7
+expect centroid end -0.0000000 2e-6
+expect radius end 0.2753094 2e-6
+expect neff 2.697343432 2e-8
+expect neff 2.69734343 2e-6
+expect power_above out 0.9995
