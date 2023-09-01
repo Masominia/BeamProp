@@ -1,0 +1,15 @@
+# A raised-cosine offset: the shorter the bend, the larger the radiation loss.
+# Reference: the same propagation stepped independently in NumPy. The pipeline checks that transmission rises with length.
+title S-bend shifting a 0.5 um guide by 1 um over 10 um
+window width=24 length=30
+guide straight x=0 width=0.5 from=0 to=10
+guide sbend x0=0 x1=1 width=0.5 from=10 to=20
+guide straight x=1 width=0.5 from=20 to=30
+launch mode x=0 width=0.5
+monitor out z=30 x=1 width=0.5
+plane end z=30
+expect power out 0.998061697 2e-7
+expect total end 0.999999819 2e-7
+expect centroid end 0.9933069 2e-6
+expect radius end 0.2795752 2e-6
+expect neff 2.633014842 2e-8
