@@ -1,0 +1,16 @@
+# The same taper run backwards transmits the same fraction, mode to mode: the structure is reciprocal.
+# Reference: the same propagation stepped independently in NumPy. The pipeline compares it with the upward taper.
+title Taper from 3 to 0.5 um over 80 um
+reference 2.75
+window width=20 length=100
+guide straight x=0 width=3 from=0 to=10
+guide taper x=0 w0=3 w1=0.5 from=10 to=90
+guide straight x=0 width=0.5 from=90 to=100
+launch mode x=0 width=3
+monitor out z=100 x=0 width=0.5
+plane end z=100
+expect power out 0.999519974 2e-7
+expect total end 0.999994830 2e-7
+expect centroid end 0.0000000 2e-6
+expect radius end 0.3132194 2e-6
+expect neff 2.788192308 2e-8
