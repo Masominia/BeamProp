@@ -1,0 +1,21 @@
+# A taper to double width followed by two diverging arms. Symmetry splits the power equally; the opening angle sets the loss.
+# Reference: equal arms by symmetry; values from the independent propagation.
+title Y-branch opening to 3 um over 40 um
+window width=24 length=70
+guide straight x=0 width=0.5 from=0 to=10
+guide taper x=0 w0=0.5 w1=1.0 from=10 to=20
+guide sbend x0=0.25 x1=1.5 width=0.5 from=20 to=60
+guide sbend x0=-0.25 x1=-1.5 width=0.5 from=20 to=60
+guide straight x=1.5 width=0.5 from=60 to=70
+guide straight x=-1.5 width=0.5 from=60 to=70
+launch mode x=0 width=0.5
+monitor upper z=70 x=1.5 width=0.5
+monitor lower z=70 x=-1.5 width=0.5
+plane end z=70
+expect power upper 0.499853493 2e-7
+expect power lower 0.499853493 2e-7
+expect total end 0.999965082 2e-7
+expect centroid end 0.0000000 2e-6
+expect radius end 3.0060238 2e-6
+expect neff 2.428390414 2e-8
+expect ratio upper lower 1.0 1e-6
