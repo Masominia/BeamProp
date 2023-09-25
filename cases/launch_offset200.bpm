@@ -1,0 +1,14 @@
+# A lateral offset costs the squared overlap of the displaced mode with the guide mode.
+# Reference: the overlap integral of the analytic modes on a fine grid.
+title Mode launched 200 nm off the axis of its guide
+window width=24 length=200
+guide straight x=0 width=0.5 from=0 to=200
+launch mode x=0.2 width=0.5
+monitor out z=200 x=0 width=0.5
+plane end z=200
+expect power out 0.586370473 2e-7
+expect total end 0.901189616 2e-7
+expect centroid end -0.0551789 2e-6
+expect radius end 1.2884561 2e-6
+expect neff 2.629660990 2e-8
+expect power out 0.58658 2e-3
