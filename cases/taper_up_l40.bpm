@@ -1,0 +1,16 @@
+# A slow taper keeps the light in the fundamental mode; a fast one scatters it into higher modes.
+# Reference: the same propagation stepped independently in NumPy. The pipeline checks that transmission rises with length.
+title Taper from 0.5 to 3 um over 40 um
+reference 2.75
+window width=20 length=60
+guide straight x=0 width=0.5 from=0 to=10
+guide taper x=0 w0=0.5 w1=3 from=10 to=50
+guide straight x=0 width=3 from=50 to=60
+launch mode x=0 width=0.5
+monitor out z=60 x=0 width=3
+plane end z=60
+expect power out 0.997663821 2e-7
+expect total end 0.999955678 2e-7
+expect centroid end 0.0000000 2e-6
+expect radius end 1.1401597 2e-6
+expect neff 2.779621697 2e-8
