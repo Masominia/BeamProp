@@ -1,0 +1,22 @@
+# Power moves to the other guide in lambda / (2 (n_even - n_odd)) = 20.37 um, from the supermodes of the transverse grid.
+# Reference: full transfer at that length, half at half of it. Monitors use the modes of the separate guides, which overlap slightly at small gaps.
+title Directional coupler, two 0.5 um guides 200 nm apart
+window width=14 length=42.75
+guide straight x=-0.35 width=0.5 from=0 to=42.75
+guide straight x=0.35 width=0.5 from=0 to=42.75
+launch mode x=-0.35 width=0.5
+monitor half_cross z=10.25 x=0.35 width=0.5
+monitor cross_full z=20.25 x=0.35 width=0.5
+monitor bar_full z=20.25 x=-0.35 width=0.5
+monitor bar_end z=42.75 x=-0.35 width=0.5
+monitor cross_end z=42.75 x=0.35 width=0.5
+expect power half_cross 0.505797145 2e-7
+expect power cross_full 0.997809020 2e-7
+expect power bar_full 0.002812010 2e-7
+expect power bar_end 0.975487005 2e-7
+expect power cross_end 0.026250017 2e-7
+expect neff 2.648884804 2e-8
+expect power_above cross_full 0.995
+expect power_below bar_full 0.005
+expect power half_cross 0.5 0.02
+expect sum bar_end cross_end 1.0 0.002
