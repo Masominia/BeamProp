@@ -1,0 +1,85 @@
+{
+ "case": "ybranch_l40",
+ "title": "Y-branch opening to 3 um over 40 um",
+ "notes": [
+  "A taper to double width followed by two diverging arms. Symmetry splits the power equally; the opening angle sets the loss.",
+  "Reference: equal arms by symmetry; values from the independent propagation."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 1200.0,
+  "nz": 280.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.6294410728,
+  "n_track": 2.4283904137,
+  "total_out": 0.999965082,
+  "in_launch_out": 5.06e-07
+ },
+ "checks": [
+  {
+   "check": "power upper 0.499853493 2e-7",
+   "status": "PASS",
+   "detail": "0.49985349, expected 0.49985349, off by -4.08e-10"
+  },
+  {
+   "check": "power lower 0.499853493 2e-7",
+   "status": "PASS",
+   "detail": "0.49985349, expected 0.49985349, off by -4.08e-10"
+  },
+  {
+   "check": "total end 0.999965082 2e-7",
+   "status": "PASS",
+   "detail": "0.99996508, expected 0.99996508, off by 1.90e-11"
+  },
+  {
+   "check": "centroid end 0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "0.00000000, expected 0.00000000, off by 1.52e-14"
+  },
+  {
+   "check": "radius end 3.0060238 2e-6",
+   "status": "PASS",
+   "detail": "3.00602380, expected 3.00602380, off by 1.13e-09"
+  },
+  {
+   "check": "neff 2.428390414 2e-8",
+   "status": "PASS",
+   "detail": "2.42839041, expected 2.42839041, off by -2.73e-10"
+  },
+  {
+   "check": "ratio upper lower 1.0 1e-6",
+   "status": "PASS",
+   "detail": "1.00000000, expected 1.00000000, off by 2.11e-14"
+  }
+ ],
+ "monitors": {
+  "upper": {
+   "z": 70.0,
+   "power": 0.4998534926,
+   "phase": 0.39720929
+  },
+  "lower": {
+   "z": 70.0,
+   "power": 0.4998534926,
+   "phase": 0.39720929
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 70.0,
+   "total": 0.999965082,
+   "centroid": 0.0,
+   "radius": 3.0060238,
+   "peak_x": 1.49
+  }
+ },
+ "against_reference": {
+  "power": 7.599920692769047e-12,
+  "total": 1.896338641671491e-11,
+  "centroid": 1.9469550797232275e-14,
+  "radius": 1.1341811934073576e-09,
+  "n_track": 2.7149837933393428e-11,
+  "field": 4.020080555334409e-11
+ }
+}
