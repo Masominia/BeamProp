@@ -1,0 +1,13 @@
+# With the reference index set to 2.5 the mode gathers phase quickly in the envelope, and the step size shows: the Crank-Nicolson step is second order.
+# Reference: the phase per step t becomes 2 atan(t / 2). The pipeline compares each field with the solution that needs no stepping.
+title Guide with a poor reference index, 0.25 um steps
+grid dx=0.02 dz=0.25
+reference 2.5
+window width=12 length=20
+guide straight x=0 width=0.5 from=0 to=20
+launch mode x=0 width=0.5
+monitor out z=20 x=0 width=0.5
+expect power out 0.999998892 2e-7
+expect neff 2.632116340 2e-8
+expect neff 2.63211634 2e-6
+expect power_above out 0.9995
