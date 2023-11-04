@@ -1,0 +1,67 @@
+{
+ "case": "coupler_length050",
+ "title": "Directional coupler cut at 0.5 of its coupling length",
+ "notes": [
+  "The crossed power follows sin^2(pi z / (2 L_c)).",
+  "Reference: that law with the coupling length from the supermodes of the grid."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 700.0,
+  "nz": 41.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.6294410728,
+  "n_track": 2.6319664301,
+  "total_out": 0.9999999984,
+  "in_launch_out": 0.4944183051
+ },
+ "checks": [
+  {
+   "check": "power bar 0.494418305 2e-7",
+   "status": "PASS",
+   "detail": "0.49441831, expected 0.49441831, off by 6.25e-11"
+  },
+  {
+   "check": "power cross 0.505797145 2e-7",
+   "status": "PASS",
+   "detail": "0.50579714, expected 0.50579714, off by -3.12e-10"
+  },
+  {
+   "check": "neff 2.631966430 2e-8",
+   "status": "PASS",
+   "detail": "2.63196643, expected 2.63196643, off by 1.40e-10"
+  },
+  {
+   "check": "power cross 0.50000 0.02",
+   "status": "PASS",
+   "detail": "0.50579714, expected 0.50000000, off by 5.80e-03"
+  },
+  {
+   "check": "sum bar cross 1.0 2e-3",
+   "status": "PASS",
+   "detail": "1.00021545, expected 1.00000000, off by 2.15e-04"
+  }
+ ],
+ "monitors": {
+  "bar": {
+   "z": 10.25,
+   "power": 0.4944183051,
+   "phase": 0.10492884
+  },
+  "cross": {
+   "z": 10.25,
+   "power": 0.5057971447,
+   "phase": 1.57264787
+  }
+ },
+ "planes": {},
+ "against_reference": {
+  "power": 3.75056652401895e-11,
+  "total": 3.0826452501742097e-12,
+  "centroid": 0.0,
+  "radius": 0.0,
+  "n_track": 3.971800666136005e-11,
+  "field": 4.092202218321188e-11
+ }
+}
