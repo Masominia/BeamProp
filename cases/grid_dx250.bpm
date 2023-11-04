@@ -1,0 +1,13 @@
+# The transverse grid changes the supermodes slightly, and with them the coupling length.
+# Reference: the same propagation stepped independently in NumPy.
+title Coupler on a 25 nm transverse grid
+grid dx=0.025 dz=0.25
+window width=14 length=20
+guide straight x=-0.35 width=0.5 from=0 to=20
+guide straight x=0.35 width=0.5 from=0 to=20
+launch mode x=-0.35 width=0.5
+monitor bar z=20 x=-0.35 width=0.5
+monitor cross z=20 x=0.35 width=0.5
+expect power bar 0.003513231 2e-7
+expect power cross 0.997785186 2e-7
+expect neff 2.644389067 2e-8
