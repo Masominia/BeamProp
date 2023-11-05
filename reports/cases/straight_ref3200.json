@@ -1,0 +1,80 @@
+{
+ "case": "straight_ref3200",
+ "title": "Straight guide with the reference index set to 3.2",
+ "notes": [
+  "The paraxial equation is exact only for waves at the reference index. A mode of index n shows n0 + (n^2 - n0^2) / (2 n0) instead.",
+  "Reference: that formula applied to the mode of the transverse grid, with the phase per step t replaced by 2 atan(t / 2) as the Crank-Nicolson step does."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 600.0,
+  "nz": 400.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 3.2,
+  "n_track": 2.691493391,
+  "total_out": 0.9999995412,
+  "in_launch_out": 0.9999988762
+ },
+ "checks": [
+  {
+   "check": "power out 0.999998876 2e-7",
+   "status": "PASS",
+   "detail": "0.99999888, expected 0.99999888, off by 2.37e-10"
+  },
+  {
+   "check": "total end 0.999999541 2e-7",
+   "status": "PASS",
+   "detail": "0.99999954, expected 0.99999954, off by 1.54e-10"
+  },
+  {
+   "check": "centroid end -0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "-0.00000000, expected -0.00000000, off by -1.23e-16"
+  },
+  {
+   "check": "radius end 0.2753097 2e-6",
+   "status": "PASS",
+   "detail": "0.27530972, expected 0.27530970, off by 2.48e-08"
+  },
+  {
+   "check": "neff 2.691493391 2e-8",
+   "status": "PASS",
+   "detail": "2.69149339, expected 2.69149339, off by 3.82e-11"
+  },
+  {
+   "check": "neff 2.69149339 2e-6",
+   "status": "PASS",
+   "detail": "2.69149339, expected 2.69149339, off by 1.04e-09"
+  },
+  {
+   "check": "power_above out 0.9995",
+   "status": "PASS",
+   "detail": "0.999999 against the bound 0.999500 (margin 4.99e-04)"
+  }
+ ],
+ "monitors": {
+  "out": {
+   "z": 100.0,
+   "power": 0.9999988762,
+   "phase": 1.21342133
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 100.0,
+   "total": 0.9999995412,
+   "centroid": -0.0,
+   "radius": 0.27530972,
+   "peak_x": -0.01
+  }
+ },
+ "against_reference": {
+  "power": 3.6798786240410664e-11,
+  "total": 4.6535886255583137e-11,
+  "centroid": 1.6076036773006056e-15,
+  "radius": 4.802669650860736e-09,
+  "n_track": 3.823075189757219e-11,
+  "field": 2.808796225246795e-11
+ }
+}
