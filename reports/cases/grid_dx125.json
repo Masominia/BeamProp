@@ -1,0 +1,57 @@
+{
+ "case": "grid_dx125",
+ "title": "Coupler on a 12.5 nm transverse grid",
+ "notes": [
+  "The transverse grid changes the supermodes slightly, and with them the coupling length.",
+  "Reference: the same propagation stepped independently in NumPy."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 1120.0,
+  "nz": 80.0,
+  "dx": 0.0125,
+  "dz": 0.25,
+  "reference": 2.6294410728,
+  "n_track": 2.64340438,
+  "total_out": 0.9999773483,
+  "in_launch_out": 0.003581549
+ },
+ "checks": [
+  {
+   "check": "power bar 0.003581549 2e-7",
+   "status": "PASS",
+   "detail": "0.00358155, expected 0.00358155, off by 2.57e-11"
+  },
+  {
+   "check": "power cross 0.997591306 2e-7",
+   "status": "PASS",
+   "detail": "0.99759131, expected 0.99759131, off by 3.59e-10"
+  },
+  {
+   "check": "neff 2.643404380 2e-8",
+   "status": "PASS",
+   "detail": "2.64340438, expected 2.64340438, off by -3.91e-11"
+  }
+ ],
+ "monitors": {
+  "bar": {
+   "z": 20.0,
+   "power": 0.003581549,
+   "phase": 1.13205221
+  },
+  "cross": {
+   "z": 20.0,
+   "power": 0.9975913064,
+   "phase": 1.63926421
+  }
+ },
+ "planes": {},
+ "against_reference": {
+  "power": 4.11484180062871e-11,
+  "total": 7.297273896256229e-12,
+  "centroid": 0.0,
+  "radius": 0.0,
+  "n_track": 3.906874823655926e-11,
+  "field": 2.962222541687388e-11
+ }
+}
