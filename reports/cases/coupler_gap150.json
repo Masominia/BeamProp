@@ -1,0 +1,107 @@
+{
+ "case": "coupler_gap150",
+ "title": "Directional coupler, two 0.5 um guides 150 nm apart",
+ "notes": [
+  "Power moves to the other guide in lambda / (2 (n_even - n_odd)) = 13.05 um, from the supermodes of the transverse grid.",
+  "Reference: full transfer at that length, half at half of it. Monitors use the modes of the separate guides, which overlap slightly at small gaps."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 700.0,
+  "nz": 112.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.6294410728,
+  "n_track": 2.6588155021,
+  "total_out": 0.9999182565,
+  "in_launch_out": 0.9481282525
+ },
+ "checks": [
+  {
+   "check": "power half_cross 0.495465978 2e-7",
+   "status": "PASS",
+   "detail": "0.49546598, expected 0.49546598, off by 3.95e-10"
+  },
+  {
+   "check": "power cross_full 0.992922740 2e-7",
+   "status": "PASS",
+   "detail": "0.99292274, expected 0.99292274, off by -5.64e-11"
+  },
+  {
+   "check": "power bar_full 0.005341318 2e-7",
+   "status": "PASS",
+   "detail": "0.00534132, expected 0.00534132, off by -2.60e-12"
+  },
+  {
+   "check": "power bar_end 0.948128252 2e-7",
+   "status": "PASS",
+   "detail": "0.94812825, expected 0.94812825, off by 4.75e-10"
+  },
+  {
+   "check": "power cross_end 0.056440567 2e-7",
+   "status": "PASS",
+   "detail": "0.05644057, expected 0.05644057, off by -1.73e-10"
+  },
+  {
+   "check": "neff 2.658815502 2e-8",
+   "status": "PASS",
+   "detail": "2.65881550, expected 2.65881550, off by 1.03e-10"
+  },
+  {
+   "check": "power_above cross_full 0.99",
+   "status": "PASS",
+   "detail": "0.992923 against the bound 0.990000 (margin 2.92e-03)"
+  },
+  {
+   "check": "power_below bar_full 0.015",
+   "status": "PASS",
+   "detail": "0.005341 against the bound 0.015000 (margin -9.66e-03)"
+  },
+  {
+   "check": "power half_cross 0.5 0.02",
+   "status": "PASS",
+   "detail": "0.49546598, expected 0.50000000, off by -4.53e-03"
+  },
+  {
+   "check": "sum bar_end cross_end 1.0 0.01",
+   "status": "PASS",
+   "detail": "1.00456882, expected 1.00000000, off by 4.57e-03"
+  }
+ ],
+ "monitors": {
+  "half_cross": {
+   "z": 6.5,
+   "power": 0.4954659784,
+   "phase": 1.53769623
+  },
+  "cross_full": {
+   "z": 13.0,
+   "power": 0.9929227399,
+   "phase": 1.65281824
+  },
+  "bar_full": {
+   "z": 13.0,
+   "power": 0.005341318,
+   "phase": 1.56677098
+  },
+  "bar_end": {
+   "z": 28.0,
+   "power": 0.9481282525,
+   "phase": -2.9491082
+  },
+  "cross_end": {
+   "z": 28.0,
+   "power": 0.0564405668,
+   "phase": -1.70246155
+  }
+ },
+ "planes": {},
+ "against_reference": {
+  "power": 4.359956840005452e-11,
+  "total": 4.292333155575534e-11,
+  "centroid": 0.0,
+  "radius": 0.0,
+  "n_track": 2.822631017806998e-12,
+  "field": 3.091148060738762e-11
+ }
+}
