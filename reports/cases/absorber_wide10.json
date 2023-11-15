@@ -1,0 +1,59 @@
+{
+ "case": "absorber_wide10",
+ "title": "Tilted beam meeting a 10 um absorber",
+ "notes": [
+  "The transverse wavelength of this beam is 4.1 um: an absorber thinner than that reflects, a wider one can be gentler.",
+  "Reference: the same propagation stepped independently in NumPy."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 1000.0,
+  "nz": 600.0,
+  "dx": 0.05,
+  "dz": 0.25,
+  "reference": 1.444,
+  "n_track": 1.4179504946,
+  "total_out": 0.0002788329,
+  "in_launch_out": 0.0
+ },
+ "checks": [
+  {
+   "check": "total end 0.000278833 2e-7",
+   "status": "PASS",
+   "detail": "0.00027883, expected 0.00027883, off by -1.25e-10"
+  },
+  {
+   "check": "centroid end 17.8027847 2e-6",
+   "status": "PASS",
+   "detail": "17.80278467, expected 17.80278470, off by -2.63e-08"
+  },
+  {
+   "check": "radius end 5.5662135 2e-6",
+   "status": "PASS",
+   "detail": "5.56621350, expected 5.56621350, off by 2.29e-09"
+  },
+  {
+   "check": "neff 1.417950495 2e-8",
+   "status": "PASS",
+   "detail": "1.41795049, expected 1.41795049, off by -3.73e-10"
+  }
+ ],
+ "monitors": {},
+ "planes": {
+  "end": {
+   "z": 150.0,
+   "total": 0.0002788329,
+   "centroid": 17.80278467,
+   "radius": 5.5662135,
+   "peak_x": 18.175
+  }
+ },
+ "against_reference": {
+  "power": 0.0,
+  "total": 2.5466162653035168e-11,
+  "centroid": 3.710635354536862e-09,
+  "radius": 2.2873374305731886e-09,
+  "n_track": 2.6915358830592595e-11,
+  "field": 8.090517698840208e-12
+ }
+}
