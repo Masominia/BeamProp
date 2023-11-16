@@ -1,0 +1,14 @@
+# The crossed power follows sin^2(pi z / (2 L_c)).
+# Reference: that law with the coupling length from the supermodes of the grid.
+title Directional coupler cut at 0.5 of its coupling length
+window width=14 length=10.25
+guide straight x=-0.35 width=0.5 from=0 to=10.25
+guide straight x=0.35 width=0.5 from=0 to=10.25
+launch mode x=-0.35 width=0.5
+monitor bar z=10.25 x=-0.35 width=0.5
+monitor cross z=10.25 x=0.35 width=0.5
+expect power bar 0.494418305 2e-7
+expect power cross 0.505797145 2e-7
+expect neff 2.631966430 2e-8
+expect power cross 0.50000 0.02
+expect sum bar cross 1.0 2e-3
