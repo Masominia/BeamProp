@@ -1,0 +1,69 @@
+{
+ "case": "free_tilt02",
+ "title": "Gaussian beam tilted by 2 degrees",
+ "notes": [
+  "In the paraxial equation a tilted beam advances sideways by z sin(angle), not z tan(angle): 3.49 against 3.49 um here.",
+  "Reference: z sin(angle), the paraxial result."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 1600.0,
+  "nz": 800.0,
+  "dx": 0.05,
+  "dz": 0.125,
+  "reference": 1.444,
+  "n_track": 1.442469491,
+  "total_out": 0.9999999995,
+  "in_launch_out": 0.3473769868
+ },
+ "checks": [
+  {
+   "check": "total end 1.000000000 2e-7",
+   "status": "PASS",
+   "detail": "1.00000000, expected 1.00000000, off by -4.70e-10"
+  },
+  {
+   "check": "centroid end 3.4893811 2e-6",
+   "status": "PASS",
+   "detail": "3.48938111, expected 3.48938110, off by 7.43e-09"
+  },
+  {
+   "check": "radius end 11.7754812 2e-6",
+   "status": "PASS",
+   "detail": "11.77548121, expected 11.77548120, off by 9.18e-09"
+  },
+  {
+   "check": "neff 1.442469491 2e-8",
+   "status": "PASS",
+   "detail": "1.44246949, expected 1.44246949, off by -2.40e-11"
+  },
+  {
+   "check": "centroid end 3.48995 0.02",
+   "status": "PASS",
+   "detail": "3.48938111, expected 3.48995000, off by -5.69e-04"
+  },
+  {
+   "check": "radius end 11.77769 0.04",
+   "status": "PASS",
+   "detail": "11.77548121, expected 11.77769000, off by -2.21e-03"
+  }
+ ],
+ "monitors": {},
+ "planes": {
+  "end": {
+   "z": 100.0,
+   "total": 0.9999999995,
+   "centroid": 3.48938111,
+   "radius": 11.77548121,
+   "peak_x": 3.475
+  }
+ },
+ "against_reference": {
+  "power": 0.0,
+  "total": 2.984723579402271e-11,
+  "centroid": 2.5700059858024815e-09,
+  "radius": 8.179306121292029e-10,
+  "n_track": 2.3951285399448352e-11,
+  "field": 2.6905820605728958e-11
+ }
+}
