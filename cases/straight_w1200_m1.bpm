@@ -1,0 +1,15 @@
+# A mode launched into its own guide keeps its shape and only gathers phase.
+# Reference: the index of the mode of the transverse grid, from a dense eigen-solve.
+title Straight guide 1.2 um wide, mode 1
+window width=12 length=100
+guide straight x=0 width=1.2 from=0 to=100
+launch mode x=0 width=1.2 order=1
+monitor out z=100 x=0 width=1.2 order=1
+plane end z=100
+expect power out 0.999999179 2e-7
+expect total end 0.999999873 2e-7
+expect centroid end 0.0000000 2e-6
+expect radius end 0.7601015 2e-6
+expect neff 2.627189252 2e-8
+expect neff 2.62718925 2e-6
+expect power_above out 0.9995
