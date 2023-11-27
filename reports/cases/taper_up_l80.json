@@ -1,0 +1,70 @@
+{
+ "case": "taper_up_l80",
+ "title": "Taper from 0.5 to 3 um over 80 um",
+ "notes": [
+  "A slow taper keeps the light in the fundamental mode; a fast one scatters it into higher modes.",
+  "Reference: the same propagation stepped independently in NumPy. The pipeline checks that transmission rises with length."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 1000.0,
+  "nz": 400.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.75,
+  "n_track": 2.7882348316,
+  "total_out": 0.9999645027,
+  "in_launch_out": 0.4213077964
+ },
+ "checks": [
+  {
+   "check": "power out 0.999519974 2e-7",
+   "status": "PASS",
+   "detail": "0.99951997, expected 0.99951997, off by -4.26e-10"
+  },
+  {
+   "check": "total end 0.999964503 2e-7",
+   "status": "PASS",
+   "detail": "0.99996450, expected 0.99996450, off by -2.83e-10"
+  },
+  {
+   "check": "centroid end 0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "-0.00000000, expected 0.00000000, off by -3.09e-14"
+  },
+  {
+   "check": "radius end 1.1531133 2e-6",
+   "status": "PASS",
+   "detail": "1.15311333, expected 1.15311330, off by 2.87e-08"
+  },
+  {
+   "check": "neff 2.788234832 2e-8",
+   "status": "PASS",
+   "detail": "2.78823483, expected 2.78823483, off by -4.20e-10"
+  }
+ ],
+ "monitors": {
+  "out": {
+   "z": 100.0,
+   "power": 0.9995199736,
+   "phase": 2.9178742
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 100.0,
+   "total": 0.9999645027,
+   "centroid": -0.0,
+   "radius": 1.15311333,
+   "peak_x": -0.01
+  }
+ },
+ "against_reference": {
+  "power": 2.6125879237781646e-11,
+  "total": 1.7131296381478478e-11,
+  "centroid": 7.283321579667366e-15,
+  "radius": 1.2973628837897877e-09,
+  "n_track": 1.9602985901201464e-11,
+  "field": 8.128498466523884e-12
+ }
+}
