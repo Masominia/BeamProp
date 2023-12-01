@@ -1,0 +1,81 @@
+{
+ "case": "straight_w1200_m1",
+ "title": "Straight guide 1.2 um wide, mode 1",
+ "notes": [
+  "A mode launched into its own guide keeps its shape and only gathers phase.",
+  "Reference: the index of the mode of the transverse grid, from a dense eigen-solve."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 600.0,
+  "nz": 400.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.6267736383,
+  "n_track": 2.6271892518,
+  "total_out": 0.9999998731,
+  "in_launch_out": 0.9999991787
+ },
+ "checks": [
+  {
+   "check": "power out 0.999999179 2e-7",
+   "status": "PASS",
+   "detail": "0.99999918, expected 0.99999918, off by -2.64e-10"
+  },
+  {
+   "check": "total end 0.999999873 2e-7",
+   "status": "PASS",
+   "detail": "0.99999987, expected 0.99999987, off by 5.55e-11"
+  },
+  {
+   "check": "centroid end 0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "0.00000000, expected 0.00000000, off by 8.02e-17"
+  },
+  {
+   "check": "radius end 0.7601015 2e-6",
+   "status": "PASS",
+   "detail": "0.76010154, expected 0.76010150, off by 4.03e-08"
+  },
+  {
+   "check": "neff 2.627189252 2e-8",
+   "status": "PASS",
+   "detail": "2.62718925, expected 2.62718925, off by -1.64e-10"
+  },
+  {
+   "check": "neff 2.62718925 2e-6",
+   "status": "PASS",
+   "detail": "2.62718925, expected 2.62718925, off by 1.84e-09"
+  },
+  {
+   "check": "power_above out 0.9995",
+   "status": "PASS",
+   "detail": "0.999999 against the bound 0.999500 (margin 4.99e-04)"
+  }
+ ],
+ "monitors": {
+  "out": {
+   "z": 100.0,
+   "power": 0.9999991787,
+   "phase": 0.16847591
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 100.0,
+   "total": 0.9999998731,
+   "centroid": 0.0,
+   "radius": 0.76010154,
+   "peak_x": -0.35
+  }
+ },
+ "against_reference": {
+  "power": 3.614852861488771e-11,
+  "total": 4.450273483058709e-11,
+  "centroid": 4.263256955757634e-15,
+  "radius": 3.3104841090647597e-10,
+  "n_track": 3.611555499105634e-11,
+  "field": 4.1121740589278956e-11
+ },
+ "against_modal_solution": 0.0009581250962268831
+}
