@@ -1,0 +1,57 @@
+{
+ "case": "step_dz00625",
+ "title": "Guide with a poor reference index, 0.0625 um steps",
+ "notes": [
+  "With the reference index set to 2.5 the mode gathers phase quickly in the envelope, and the step size shows: the Crank-Nicolson step is second order.",
+  "Reference: the phase per step t becomes 2 atan(t / 2). The pipeline compares each field with the solution that needs no stepping."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 600.0,
+  "nz": 320.0,
+  "dx": 0.02,
+  "dz": 0.0625,
+  "reference": 2.5,
+  "n_track": 2.6323016694,
+  "total_out": 0.9999996619,
+  "in_launch_out": 0.9999988525
+ },
+ "checks": [
+  {
+   "check": "power out 0.999998852 2e-7",
+   "status": "PASS",
+   "detail": "0.99999885, expected 0.99999885, off by 4.85e-10"
+  },
+  {
+   "check": "neff 2.632301669 2e-8",
+   "status": "PASS",
+   "detail": "2.63230167, expected 2.63230167, off by 3.73e-10"
+  },
+  {
+   "check": "neff 2.63230167 2e-6",
+   "status": "PASS",
+   "detail": "2.63230167, expected 2.63230167, off by -6.27e-10"
+  },
+  {
+   "check": "power_above out 0.9995",
+   "status": "PASS",
+   "detail": "0.999999 against the bound 0.999500 (margin 4.99e-04)"
+  }
+ ],
+ "monitors": {
+  "out": {
+   "z": 20.0,
+   "power": 0.9999988525,
+   "phase": -1.8402299
+  }
+ },
+ "planes": {},
+ "against_reference": {
+  "power": 1.5308421197346433e-11,
+  "total": 2.0146662116360403e-11,
+  "centroid": 0.0,
+  "radius": 0.0,
+  "n_track": 2.673417043297377e-11,
+  "field": 2.762358339081575e-11
+ }
+}
