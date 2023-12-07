@@ -1,0 +1,75 @@
+{
+ "case": "launch_offset300",
+ "title": "Mode launched 300 nm off the axis of its guide",
+ "notes": [
+  "A lateral offset costs the squared overlap of the displaced mode with the guide mode.",
+  "Reference: the overlap integral of the analytic modes on a fine grid."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 1200.0,
+  "nz": 800.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.6294410728,
+  "n_track": 2.0413533512,
+  "total_out": 0.6832333651,
+  "in_launch_out": 0.1509257588
+ },
+ "checks": [
+  {
+   "check": "power out 0.303768860 2e-7",
+   "status": "PASS",
+   "detail": "0.30376886, expected 0.30376886, off by 1.78e-10"
+  },
+  {
+   "check": "total end 0.683233365 2e-7",
+   "status": "PASS",
+   "detail": "0.68323337, expected 0.68323336, off by 1.06e-10"
+  },
+  {
+   "check": "centroid end -0.0847219 2e-6",
+   "status": "PASS",
+   "detail": "-0.08472193, expected -0.08472190, off by -2.89e-08"
+  },
+  {
+   "check": "radius end 2.1289405 2e-6",
+   "status": "PASS",
+   "detail": "2.12894047, expected 2.12894050, off by -3.12e-08"
+  },
+  {
+   "check": "neff 2.041353351 2e-8",
+   "status": "PASS",
+   "detail": "2.04135335, expected 2.04135335, off by 1.74e-10"
+  },
+  {
+   "check": "power out 0.30399 2e-3",
+   "status": "PASS",
+   "detail": "0.30376886, expected 0.30399000, off by -2.21e-04"
+  }
+ ],
+ "monitors": {
+  "out": {
+   "z": 200.0,
+   "power": 0.3037688602,
+   "phase": -0.36844889
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 200.0,
+   "total": 0.6832333651,
+   "centroid": -0.08472193,
+   "radius": 2.12894047,
+   "peak_x": -0.15
+  }
+ },
+ "against_reference": {
+  "power": 2.156008704901069e-11,
+  "total": 6.394884621840902e-12,
+  "centroid": 1.0571525183022956e-09,
+  "radius": 1.2413643446507194e-09,
+  "n_track": 2.644950924945988e-11,
+  "field": 2.806246189286378e-11
+ }
+}
