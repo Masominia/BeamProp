@@ -1,0 +1,81 @@
+{
+ "case": "straight_w2000_m2",
+ "title": "Straight guide 2 um wide, mode 2",
+ "notes": [
+  "A mode launched into its own guide keeps its shape and only gathers phase.",
+  "Reference: the index of the mode of the transverse grid, from a dense eigen-solve."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 600.0,
+  "nz": 400.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.6461375058,
+  "n_track": 2.6464209889,
+  "total_out": 0.9999999239,
+  "in_launch_out": 0.9999991872
+ },
+ "checks": [
+  {
+   "check": "power out 0.999999187 2e-7",
+   "status": "PASS",
+   "detail": "0.99999919, expected 0.99999919, off by 2.34e-10"
+  },
+  {
+   "check": "total end 0.999999924 2e-7",
+   "status": "PASS",
+   "detail": "0.99999992, expected 0.99999992, off by -7.54e-11"
+  },
+  {
+   "check": "centroid end -0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "0.00000000, expected -0.00000000, off by 7.94e-15"
+  },
+  {
+   "check": "radius end 1.2403027 2e-6",
+   "status": "PASS",
+   "detail": "1.24030272, expected 1.24030270, off by 1.86e-08"
+  },
+  {
+   "check": "neff 2.646420989 2e-8",
+   "status": "PASS",
+   "detail": "2.64642099, expected 2.64642099, off by -1.07e-10"
+  },
+  {
+   "check": "neff 2.64642099 2e-6",
+   "status": "PASS",
+   "detail": "2.64642099, expected 2.64642099, off by -1.11e-09"
+  },
+  {
+   "check": "power_above out 0.9995",
+   "status": "PASS",
+   "detail": "0.999999 against the bound 0.999500 (margin 4.99e-04)"
+  }
+ ],
+ "monitors": {
+  "out": {
+   "z": 100.0,
+   "power": 0.9999991872,
+   "phase": 0.11491461
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 100.0,
+   "total": 0.9999999239,
+   "centroid": 0.0,
+   "radius": 1.24030272,
+   "peak_x": 0.73
+  }
+ },
+ "against_reference": {
+  "power": 3.3827385337303895e-11,
+  "total": 2.4624968730790897e-11,
+  "centroid": 2.451372624861437e-15,
+  "radius": 1.3974508217273751e-09,
+  "n_track": 7.426503856322597e-12,
+  "field": 6.678788321143881e-12
+ },
+ "against_modal_solution": 0.0009527063194423362
+}
