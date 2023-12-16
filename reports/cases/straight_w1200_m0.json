@@ -1,0 +1,80 @@
+{
+ "case": "straight_w1200_m0",
+ "title": "Straight guide 1.2 um wide, mode 0",
+ "notes": [
+  "A mode launched into its own guide keeps its shape and only gathers phase.",
+  "Reference: the index of the mode of the transverse grid, from a dense eigen-solve."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 600.0,
+  "nz": 400.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.7938954316,
+  "n_track": 2.7939782848,
+  "total_out": 0.9999999717,
+  "in_launch_out": 0.9999998303
+ },
+ "checks": [
+  {
+   "check": "power out 0.999999830 2e-7",
+   "status": "PASS",
+   "detail": "0.99999983, expected 0.99999983, off by 3.48e-10"
+  },
+  {
+   "check": "total end 0.999999972 2e-7",
+   "status": "PASS",
+   "detail": "0.99999997, expected 0.99999997, off by -3.19e-10"
+  },
+  {
+   "check": "centroid end 0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "0.00000000, expected 0.00000000, off by 2.06e-15"
+  },
+  {
+   "check": "radius end 0.5114102 2e-6",
+   "status": "PASS",
+   "detail": "0.51141023, expected 0.51141020, off by 2.84e-08"
+  },
+  {
+   "check": "neff 2.793978285 2e-8",
+   "status": "PASS",
+   "detail": "2.79397828, expected 2.79397829, off by -1.98e-10"
+  },
+  {
+   "check": "neff 2.79397828 2e-6",
+   "status": "PASS",
+   "detail": "2.79397828, expected 2.79397828, off by 4.80e-09"
+  },
+  {
+   "check": "power_above out 0.9995",
+   "status": "PASS",
+   "detail": "1.000000 against the bound 0.999500 (margin 5.00e-04)"
+  }
+ ],
+ "monitors": {
+  "out": {
+   "z": 100.0,
+   "power": 0.9999998303,
+   "phase": 0.03358592
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 100.0,
+   "total": 0.9999999717,
+   "centroid": 0.0,
+   "radius": 0.51141023,
+   "peak_x": -0.01
+  }
+ },
+ "against_reference": {
+  "power": 4.7511661271926187e-11,
+  "total": 1.8689605418842348e-11,
+  "centroid": 1.296740529484175e-15,
+  "radius": 1.5669631148185204e-09,
+  "n_track": 2.169819879327406e-12,
+  "field": 3.5147194341215116e-11
+ }
+}
