@@ -1,0 +1,57 @@
+{
+ "case": "step_dz2000",
+ "title": "Coupler propagated with 2 um steps",
+ "notes": [
+  "The Crank-Nicolson step is second order: halving it divides the error by four.",
+  "Reference: the same propagation stepped independently in NumPy. The pipeline compares each with the solution that needs no stepping."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 700.0,
+  "nz": 10.0,
+  "dx": 0.02,
+  "dz": 2.0,
+  "reference": 2.6294410728,
+  "n_track": 2.6433801397,
+  "total_out": 1.0,
+  "in_launch_out": 0.0037196539
+ },
+ "checks": [
+  {
+   "check": "power bar 0.003719654 2e-7",
+   "status": "PASS",
+   "detail": "0.00371965, expected 0.00371965, off by -1.31e-10"
+  },
+  {
+   "check": "power cross 0.997829789 2e-7",
+   "status": "PASS",
+   "detail": "0.99782979, expected 0.99782979, off by -4.35e-10"
+  },
+  {
+   "check": "neff 2.643380140 2e-8",
+   "status": "PASS",
+   "detail": "2.64338014, expected 2.64338014, off by -3.01e-10"
+  }
+ ],
+ "monitors": {
+  "bar": {
+   "z": 20.0,
+   "power": 0.0037196539,
+   "phase": 1.13008697
+  },
+  "cross": {
+   "z": 20.0,
+   "power": 0.9978297886,
+   "phase": 1.67206089
+  }
+ },
+ "planes": {},
+ "against_reference": {
+  "power": 3.5309422052876016e-11,
+  "total": 2.886579864025407e-15,
+  "centroid": 0.0,
+  "radius": 0.0,
+  "n_track": 6.443734434924409e-13,
+  "field": 2.837505818862982e-11
+ }
+}
