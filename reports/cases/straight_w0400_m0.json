@@ -1,0 +1,81 @@
+{
+ "case": "straight_w0400_m0",
+ "title": "Straight guide 0.4 um wide, mode 0",
+ "notes": [
+  "A mode launched into its own guide keeps its shape and only gathers phase.",
+  "Reference: the index of the mode of the transverse grid, from a dense eigen-solve."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 600.0,
+  "nz": 400.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.5501613117,
+  "n_track": 2.5511793969,
+  "total_out": 0.9999996208,
+  "in_launch_out": 0.9999980865
+ },
+ "checks": [
+  {
+   "check": "power out 0.999998087 2e-7",
+   "status": "PASS",
+   "detail": "0.99999809, expected 0.99999809, off by -4.61e-10"
+  },
+  {
+   "check": "total end 0.999999621 2e-7",
+   "status": "PASS",
+   "detail": "0.99999962, expected 0.99999962, off by -2.18e-10"
+  },
+  {
+   "check": "centroid end -0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "-0.00000000, expected -0.00000000, off by -2.34e-15"
+  },
+  {
+   "check": "radius end 0.2488348 2e-6",
+   "status": "PASS",
+   "detail": "0.24883479, expected 0.24883480, off by -1.30e-08"
+  },
+  {
+   "check": "neff 2.551179397 2e-8",
+   "status": "PASS",
+   "detail": "2.55117940, expected 2.55117940, off by -1.25e-10"
+  },
+  {
+   "check": "neff 2.55117940 2e-6",
+   "status": "PASS",
+   "detail": "2.55117940, expected 2.55117940, off by -3.12e-09"
+  },
+  {
+   "check": "power_above out 0.9995",
+   "status": "PASS",
+   "detail": "0.999998 against the bound 0.999500 (margin 4.98e-04)"
+  }
+ ],
+ "monitors": {
+  "out": {
+   "z": 100.0,
+   "power": 0.9999980865,
+   "phase": 0.41269794
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 100.0,
+   "total": 0.9999996208,
+   "centroid": -0.0,
+   "radius": 0.24883479,
+   "peak_x": -0.01
+  }
+ },
+ "against_reference": {
+  "power": 3.9176328847645436e-11,
+  "total": 1.8434476167783487e-11,
+  "centroid": 3.756996140053725e-15,
+  "radius": 3.000822729193331e-09,
+  "n_track": 2.453370839816671e-11,
+  "field": 2.3812232492765193e-11
+ },
+ "against_modal_solution": 0.000337868034522748
+}
