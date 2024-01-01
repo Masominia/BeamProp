@@ -1,0 +1,70 @@
+{
+ "case": "sbend_off2_l80",
+ "title": "S-bend shifting a 0.5 um guide by 2 um over 80 um",
+ "notes": [
+  "A raised-cosine offset: the shorter the bend, the larger the radiation loss.",
+  "Reference: the same propagation stepped independently in NumPy. The pipeline checks that transmission rises with length."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 1200.0,
+  "nz": 400.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.6294410728,
+  "n_track": 2.2334952244,
+  "total_out": 0.9999861219,
+  "in_launch_out": 6.6e-09
+ },
+ "checks": [
+  {
+   "check": "power out 0.999894697 2e-7",
+   "status": "PASS",
+   "detail": "0.99989470, expected 0.99989470, off by -4.04e-10"
+  },
+  {
+   "check": "total end 0.999986122 2e-7",
+   "status": "PASS",
+   "detail": "0.99998612, expected 0.99998612, off by -6.88e-11"
+  },
+  {
+   "check": "centroid end 1.9999755 2e-6",
+   "status": "PASS",
+   "detail": "1.99997550, expected 1.99997550, off by 4.49e-09"
+  },
+  {
+   "check": "radius end 0.3051855 2e-6",
+   "status": "PASS",
+   "detail": "0.30518546, expected 0.30518550, off by -4.39e-08"
+  },
+  {
+   "check": "neff 2.233495224 2e-8",
+   "status": "PASS",
+   "detail": "2.23349522, expected 2.23349522, off by 4.04e-10"
+  }
+ ],
+ "monitors": {
+  "out": {
+   "z": 100.0,
+   "power": 0.9998946966,
+   "phase": 0.26311256
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 100.0,
+   "total": 0.9999861219,
+   "centroid": 1.9999755,
+   "radius": 0.30518546,
+   "peak_x": 1.99
+  }
+ },
+ "against_reference": {
+  "power": 3.8120617773529375e-12,
+  "total": 3.117306413003007e-11,
+  "centroid": 4.4892132233798065e-09,
+  "radius": 3.870929521365696e-09,
+  "n_track": 4.121591956618431e-12,
+  "field": 2.9914556827990826e-11
+ }
+}
