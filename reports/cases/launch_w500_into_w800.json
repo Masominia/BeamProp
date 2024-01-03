@@ -1,0 +1,75 @@
+{
+ "case": "launch_w500_into_w800",
+ "title": "Mode of a 0.5 um guide launched into a 0.8 um guide",
+ "notes": [
+  "The power that stays guided is the squared overlap of the two mode profiles; the rest radiates into the absorbers.",
+  "Reference: the overlap integral of the analytic modes on a fine grid."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 1200.0,
+  "nz": 800.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.6294410728,
+  "n_track": 2.7440541821,
+  "total_out": 0.9955358374,
+  "in_launch_out": 0.9110284548
+ },
+ "checks": [
+  {
+   "check": "power out 0.947444027 2e-7",
+   "status": "PASS",
+   "detail": "0.94744403, expected 0.94744403, off by 4.37e-10"
+  },
+  {
+   "check": "total end 0.995535837 2e-7",
+   "status": "PASS",
+   "detail": "0.99553584, expected 0.99553584, off by 4.08e-10"
+  },
+  {
+   "check": "centroid end 0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "-0.00000000, expected 0.00000000, off by -2.23e-15"
+  },
+  {
+   "check": "radius end 0.4891702 2e-6",
+   "status": "PASS",
+   "detail": "0.48917022, expected 0.48917020, off by 2.23e-08"
+  },
+  {
+   "check": "neff 2.744054182 2e-8",
+   "status": "PASS",
+   "detail": "2.74405418, expected 2.74405418, off by 5.30e-11"
+  },
+  {
+   "check": "power out 0.94761 2e-3",
+   "status": "PASS",
+   "detail": "0.94744403, expected 0.94761000, off by -1.66e-04"
+  }
+ ],
+ "monitors": {
+  "out": {
+   "z": 200.0,
+   "power": 0.9474440274,
+   "phase": -1.37652866
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 200.0,
+   "total": 0.9955358374,
+   "centroid": -0.0,
+   "radius": 0.48917022,
+   "peak_x": -0.01
+  }
+ },
+ "against_reference": {
+  "power": 3.71472852478405e-11,
+  "total": 7.979061855678538e-12,
+  "centroid": 3.76492014681589e-15,
+  "radius": 2.275425292630473e-09,
+  "n_track": 4.6995296543173026e-11,
+  "field": 3.4688414625317906e-11
+ }
+}
