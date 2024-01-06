@@ -1,0 +1,90 @@
+{
+ "case": "mmi_1x2_w4_l100",
+ "title": "1x2 multimode interferometer 4 um wide at 1 of the imaging length",
+ "notes": [
+  "A centred input forms two images at 3 L_pi / 8, with L_pi = 42.56 um from the two lowest modes of the body.",
+  "Reference: equal outputs by symmetry; near the imaging length each carries almost half."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 700.0,
+  "nz": 164.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.8,
+  "n_track": 2.8121299817,
+  "total_out": 0.9996944863,
+  "in_launch_out": 0.0228762646
+ },
+ "checks": [
+  {
+   "check": "power upper 0.493043513 2e-7",
+   "status": "PASS",
+   "detail": "0.49304351, expected 0.49304351, off by 2.47e-10"
+  },
+  {
+   "check": "power lower 0.493043513 2e-7",
+   "status": "PASS",
+   "detail": "0.49304351, expected 0.49304351, off by 2.47e-10"
+  },
+  {
+   "check": "total end 0.999694486 2e-7",
+   "status": "PASS",
+   "detail": "0.99969449, expected 0.99969449, off by 2.71e-10"
+  },
+  {
+   "check": "centroid end 0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "0.00000000, expected 0.00000000, off by 3.76e-14"
+  },
+  {
+   "check": "radius end 2.0186846 2e-6",
+   "status": "PASS",
+   "detail": "2.01868458, expected 2.01868460, off by -2.11e-08"
+  },
+  {
+   "check": "neff 2.812129982 2e-8",
+   "status": "PASS",
+   "detail": "2.81212998, expected 2.81212998, off by -3.47e-10"
+  },
+  {
+   "check": "ratio upper lower 1.0 1e-4",
+   "status": "PASS",
+   "detail": "1.00000000, expected 1.00000000, off by 8.17e-14"
+  },
+  {
+   "check": "power_above upper 0.46",
+   "status": "PASS",
+   "detail": "0.493044 against the bound 0.460000 (margin 3.30e-02)"
+  }
+ ],
+ "monitors": {
+  "upper": {
+   "z": 41.0,
+   "power": 0.4930435132,
+   "phase": 2.13685336
+  },
+  "lower": {
+   "z": 41.0,
+   "power": 0.4930435132,
+   "phase": 2.13685336
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 41.0,
+   "total": 0.9996944863,
+   "centroid": 0.0,
+   "radius": 2.01868458,
+   "peak_x": 0.93
+  }
+ },
+ "against_reference": {
+  "power": 4.738603953668985e-11,
+  "total": 2.8844704402786192e-11,
+  "centroid": 3.3050334543790686e-14,
+  "radius": 1.1083374218401332e-09,
+  "n_track": 4.707834122541499e-11,
+  "field": 7.336069010040691e-12
+ }
+}
