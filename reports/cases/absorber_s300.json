@@ -1,0 +1,59 @@
+{
+ "case": "absorber_s300",
+ "title": "Tilted beam meeting the edge, absorber strength 3",
+ "notes": [
+  "A beam at 15 degrees leaves the window half way along. What is left at the end was reflected: everything without an absorber, some if the absorber is too weak (the wall behind it) or too strong (its own front).",
+  "Reference: the same propagation stepped independently in NumPy."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 800.0,
+  "nz": 600.0,
+  "dx": 0.05,
+  "dz": 0.25,
+  "reference": 1.444,
+  "n_track": 1.4172202983,
+  "total_out": 0.0312790175,
+  "in_launch_out": 0.0
+ },
+ "checks": [
+  {
+   "check": "total end 0.031279017 2e-7",
+   "status": "PASS",
+   "detail": "0.03127902, expected 0.03127902, off by 4.84e-10"
+  },
+  {
+   "check": "centroid end -2.8305508 2e-6",
+   "status": "PASS",
+   "detail": "-2.83055084, expected -2.83055080, off by -3.98e-08"
+  },
+  {
+   "check": "radius end 10.7930516 2e-6",
+   "status": "PASS",
+   "detail": "10.79305157, expected 10.79305160, off by -3.13e-08"
+  },
+  {
+   "check": "neff 1.417220298 2e-8",
+   "status": "PASS",
+   "detail": "1.41722030, expected 1.41722030, off by 3.24e-10"
+  }
+ ],
+ "monitors": {},
+ "planes": {
+  "end": {
+   "z": 150.0,
+   "total": 0.0312790175,
+   "centroid": -2.83055084,
+   "radius": 10.79305157,
+   "peak_x": -2.925
+  }
+ },
+ "against_reference": {
+  "power": 0.0,
+  "total": 1.571330565663942e-11,
+  "centroid": 1.5393863961321586e-10,
+  "radius": 1.2762644274744162e-09,
+  "n_track": 2.4590995906237367e-11,
+  "field": 1.442938452932989e-11
+ }
+}
