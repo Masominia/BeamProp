@@ -1,0 +1,85 @@
+{
+ "case": "mmi_1x2_w6_l120",
+ "title": "1x2 multimode interferometer 6 um wide at 1.2 of the imaging length",
+ "notes": [
+  "A centred input forms two images at 3 L_pi / 8, with L_pi = 92.70 um from the two lowest modes of the body.",
+  "Reference: equal outputs by symmetry; near the imaging length each carries almost half."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 800.0,
+  "nz": 267.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.8,
+  "n_track": 2.5907418706,
+  "total_out": 0.9977437364,
+  "in_launch_out": 0.2657171687
+ },
+ "checks": [
+  {
+   "check": "power upper 0.183325672 2e-7",
+   "status": "PASS",
+   "detail": "0.18332567, expected 0.18332567, off by -1.97e-10"
+  },
+  {
+   "check": "power lower 0.183325672 2e-7",
+   "status": "PASS",
+   "detail": "0.18332567, expected 0.18332567, off by -1.97e-10"
+  },
+  {
+   "check": "total end 0.997743736 2e-7",
+   "status": "PASS",
+   "detail": "0.99774374, expected 0.99774374, off by 4.31e-10"
+  },
+  {
+   "check": "centroid end 0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "0.00000000, expected 0.00000000, off by 2.23e-14"
+  },
+  {
+   "check": "radius end 5.3174712 2e-6",
+   "status": "PASS",
+   "detail": "5.31747120, expected 5.31747120, off by 1.76e-09"
+  },
+  {
+   "check": "neff 2.590741871 2e-8",
+   "status": "PASS",
+   "detail": "2.59074187, expected 2.59074187, off by -4.07e-10"
+  },
+  {
+   "check": "ratio upper lower 1.0 1e-4",
+   "status": "PASS",
+   "detail": "1.00000000, expected 1.00000000, off by 1.01e-13"
+  }
+ ],
+ "monitors": {
+  "upper": {
+   "z": 66.75,
+   "power": 0.1833256718,
+   "phase": 0.26807564
+  },
+  "lower": {
+   "z": 66.75,
+   "power": 0.1833256718,
+   "phase": 0.26807564
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 66.75,
+   "total": 0.9977437364,
+   "centroid": 0.0,
+   "radius": 5.3174712,
+   "peak_x": 2.01
+  }
+ },
+ "against_reference": {
+  "power": 2.550959443681222e-12,
+  "total": 3.052036401385294e-11,
+  "centroid": 6.238429907389272e-14,
+  "radius": 1.7543966279731649e-09,
+  "n_track": 7.487788167281906e-12,
+  "field": 9.927562254620438e-12
+ }
+}
