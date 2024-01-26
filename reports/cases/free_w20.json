@@ -1,0 +1,74 @@
+{
+ "case": "free_w20",
+ "title": "Gaussian beam of 2 um waist diffracting in the cladding",
+ "notes": [
+  "A Gaussian beam spreads as w0 sqrt(1 + (z / z_R)^2); the paraxial equation reproduces this exactly.",
+  "Reference: the closed form, within 0.4% (grid and window)."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 6160.0,
+  "nz": 600.0,
+  "dx": 0.05,
+  "dz": 0.25,
+  "reference": 1.444,
+  "n_track": 1.4428356424,
+  "total_out": 1.0,
+  "in_launch_out": 0.1542266889
+ },
+ "checks": [
+  {
+   "check": "total end 1.000000000 2e-7",
+   "status": "PASS",
+   "detail": "1.00000000, expected 1.00000000, off by 3.30e-13"
+  },
+  {
+   "check": "centroid end -0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "-0.00000000, expected -0.00000000, off by -5.52e-15"
+  },
+  {
+   "check": "radius end 25.6929320 2e-6",
+   "status": "PASS",
+   "detail": "25.69293199, expected 25.69293200, off by -6.76e-09"
+  },
+  {
+   "check": "neff 1.442835642 2e-8",
+   "status": "PASS",
+   "detail": "1.44283564, expected 1.44283564, off by 4.47e-10"
+  },
+  {
+   "check": "radius end 25.70364 0.1028",
+   "status": "PASS",
+   "detail": "25.69293199, expected 25.70364000, off by -1.07e-02"
+  },
+  {
+   "check": "conserved 1e-6",
+   "status": "PASS",
+   "detail": "largest change of the total power 3.30e-13 over 600 steps of 0.250 um"
+  },
+  {
+   "check": "centroid end 0 1e-6",
+   "status": "PASS",
+   "detail": "-0.00000000, expected 0.00000000, off by -5.52e-15"
+  }
+ ],
+ "monitors": {},
+ "planes": {
+  "end": {
+   "z": 150.0,
+   "total": 1.0,
+   "centroid": -0.0,
+   "radius": 25.69293199,
+   "peak_x": -0.025
+  }
+ },
+ "against_reference": {
+  "power": 0.0,
+  "total": 3.3439917501709715e-13,
+  "centroid": 5.684341886078902e-15,
+  "radius": 3.241304113998922e-09,
+  "n_track": 4.699973743527153e-11,
+  "field": 3.656911563860814e-11
+ }
+}
