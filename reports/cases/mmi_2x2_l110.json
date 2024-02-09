@@ -1,0 +1,80 @@
+{
+ "case": "mmi_2x2_l110",
+ "title": "2x2 multimode interferometer at 1.1 of the 3 dB length",
+ "notes": [
+  "Inputs at a sixth of the width from the axis excite no mode of order 2, 5, 8: two images appear at L_pi / 2 = 46.35 um.",
+  "Reference: a 3 dB split near that length."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 800.0,
+  "nz": 304.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.8,
+  "n_track": 2.824166898,
+  "total_out": 0.9970108562,
+  "in_launch_out": 0.2838329123
+ },
+ "checks": [
+  {
+   "check": "power bar 0.283832912 2e-7",
+   "status": "PASS",
+   "detail": "0.28383291, expected 0.28383291, off by 3.26e-10"
+  },
+  {
+   "check": "power cross 0.221306911 2e-7",
+   "status": "PASS",
+   "detail": "0.22130691, expected 0.22130691, off by -2.82e-10"
+  },
+  {
+   "check": "total end 0.997010856 2e-7",
+   "status": "PASS",
+   "detail": "0.99701086, expected 0.99701086, off by 2.16e-10"
+  },
+  {
+   "check": "centroid end 0.2415539 2e-6",
+   "status": "PASS",
+   "detail": "0.24155388, expected 0.24155390, off by -1.62e-08"
+  },
+  {
+   "check": "radius end 5.3020129 2e-6",
+   "status": "PASS",
+   "detail": "5.30201291, expected 5.30201290, off by 6.58e-09"
+  },
+  {
+   "check": "neff 2.824166898 2e-8",
+   "status": "PASS",
+   "detail": "2.82416690, expected 2.82416690, off by -2.29e-11"
+  }
+ ],
+ "monitors": {
+  "bar": {
+   "z": 76.0,
+   "power": 0.2838329123,
+   "phase": 1.16212274
+  },
+  "cross": {
+   "z": 76.0,
+   "power": 0.2213069107,
+   "phase": 2.94129892
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 76.0,
+   "total": 0.9970108562,
+   "centroid": 0.24155388,
+   "radius": 5.30201291,
+   "peak_x": 1.33
+  }
+ },
+ "against_reference": {
+  "power": 2.5532631564573194e-11,
+  "total": 1.6137313707531575e-11,
+  "centroid": 3.767040845925607e-09,
+  "radius": 3.4167113582839193e-09,
+  "n_track": 2.2856383452563023e-11,
+  "field": 8.370850465646841e-12
+ }
+}
