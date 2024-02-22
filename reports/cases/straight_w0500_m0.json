@@ -1,0 +1,81 @@
+{
+ "case": "straight_w0500_m0",
+ "title": "Straight guide 0.5 um wide, mode 0",
+ "notes": [
+  "A mode launched into its own guide keeps its shape and only gathers phase.",
+  "Reference: the index of the mode of the transverse grid, from a dense eigen-solve."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 600.0,
+  "nz": 400.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.6294410728,
+  "n_track": 2.6289865904,
+  "total_out": 0.9999995142,
+  "in_launch_out": 0.9999988557
+ },
+ "checks": [
+  {
+   "check": "power out 0.999998856 2e-7",
+   "status": "PASS",
+   "detail": "0.99999886, expected 0.99999886, off by -2.66e-10"
+  },
+  {
+   "check": "total end 0.999999514 2e-7",
+   "status": "PASS",
+   "detail": "0.99999951, expected 0.99999951, off by 2.22e-10"
+  },
+  {
+   "check": "centroid end -0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "-0.00000000, expected -0.00000000, off by -1.09e-16"
+  },
+  {
+   "check": "radius end 0.2753074 2e-6",
+   "status": "PASS",
+   "detail": "0.27530738, expected 0.27530740, off by -1.63e-08"
+  },
+  {
+   "check": "neff 2.628986590 2e-8",
+   "status": "PASS",
+   "detail": "2.62898659, expected 2.62898659, off by 4.15e-10"
+  },
+  {
+   "check": "neff 2.62898659 2e-6",
+   "status": "PASS",
+   "detail": "2.62898659, expected 2.62898659, off by 4.15e-10"
+  },
+  {
+   "check": "power_above out 0.9995",
+   "status": "PASS",
+   "detail": "0.999999 against the bound 0.999500 (margin 4.99e-04)"
+  }
+ ],
+ "monitors": {
+  "out": {
+   "z": 100.0,
+   "power": 0.9999988557,
+   "phase": -0.18423207
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 100.0,
+   "total": 0.9999995142,
+   "centroid": -0.0,
+   "radius": 0.27530738,
+   "peak_x": -0.01
+  }
+ },
+ "against_reference": {
+  "power": 3.389855063318237e-11,
+  "total": 2.228561779560323e-11,
+  "centroid": 2.0428113576625208e-16,
+  "radius": 3.742427368003121e-09,
+  "n_track": 1.538991156735392e-11,
+  "field": 2.708227274877514e-11
+ },
+ "against_modal_solution": 9.688045404484077e-05
+}
