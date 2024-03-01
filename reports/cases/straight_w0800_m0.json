@@ -1,0 +1,81 @@
+{
+ "case": "straight_w0800_m0",
+ "title": "Straight guide 0.8 um wide, mode 0",
+ "notes": [
+  "A mode launched into its own guide keeps its shape and only gathers phase.",
+  "Reference: the index of the mode of the transverse grid, from a dense eigen-solve."
+ ],
+ "metrics": {
+  "wavelength": 1.55,
+  "nx": 600.0,
+  "nz": 400.0,
+  "dx": 0.02,
+  "dz": 0.25,
+  "reference": 2.7414945775,
+  "n_track": 2.7417245397,
+  "total_out": 0.9999999258,
+  "in_launch_out": 0.9999995541
+ },
+ "checks": [
+  {
+   "check": "power out 0.999999554 2e-7",
+   "status": "PASS",
+   "detail": "0.99999955, expected 0.99999955, off by 8.71e-11"
+  },
+  {
+   "check": "total end 0.999999926 2e-7",
+   "status": "PASS",
+   "detail": "0.99999993, expected 0.99999993, off by -2.32e-10"
+  },
+  {
+   "check": "centroid end 0.0000000 2e-6",
+   "status": "PASS",
+   "detail": "0.00000000, expected 0.00000000, off by 2.28e-15"
+  },
+  {
+   "check": "radius end 0.3719149 2e-6",
+   "status": "PASS",
+   "detail": "0.37191490, expected 0.37191490, off by 2.86e-09"
+  },
+  {
+   "check": "neff 2.741724540 2e-8",
+   "status": "PASS",
+   "detail": "2.74172454, expected 2.74172454, off by -2.79e-10"
+  },
+  {
+   "check": "neff 2.74172454 2e-6",
+   "status": "PASS",
+   "detail": "2.74172454, expected 2.74172454, off by -2.79e-10"
+  },
+  {
+   "check": "power_above out 0.9995",
+   "status": "PASS",
+   "detail": "1.000000 against the bound 0.999500 (margin 5.00e-04)"
+  }
+ ],
+ "monitors": {
+  "out": {
+   "z": 100.0,
+   "power": 0.9999995541,
+   "phase": 0.09321903
+  }
+ },
+ "planes": {
+  "end": {
+   "z": 100.0,
+   "total": 0.9999999258,
+   "centroid": 0.0,
+   "radius": 0.3719149,
+   "peak_x": -0.01
+  }
+ },
+ "against_reference": {
+  "power": 1.287214779210899e-11,
+  "total": 3.204347898133619e-11,
+  "centroid": 1.429967361866601e-15,
+  "radius": 2.8605378621371358e-09,
+  "n_track": 2.1119994642049278e-11,
+  "field": 2.8191958811279792e-11
+ },
+ "against_modal_solution": 0.0007208033554892613
+}
